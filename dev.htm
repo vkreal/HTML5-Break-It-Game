@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Enable IE9 Standards mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+        <title>Breakout</title>
+        <link href='http://fonts.googleapis.com/css?family=Bangers&v1' rel='stylesheet' type='text/css'/>
+        <link href='assets/base.css' rel='stylesheet' type='text/css'/>
+    </head>
+    <body style="margin:0;padding:0;">
+        <div style="display: block;">
+            <div style="position:relative; top:20px;">
+                <table border="0" style=" margin: auto;">
+                    <tr>
+                        <td>
+                            <div id="scoreboard-container">
+                                <button class="btn red small" onclick="BREAKOUT.levelsUI()">Levels</button>
+                                <button class="btn blue small" onclick="BREAKOUT.pauseToggle()">Pause</button> 
+                                <button class="btn small" onclick="BREAKOUT.restartLevel()">Restart</button> 
+                               
+                                <button class="btn small" onclick="BREAKOUT.saveAsPNG()">Screen Shoot</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="height:100%;">
+                             <div style="position: relative; border:4px solid #0B3657; width:752px; height:567px; border-radius: 15px; background-color:black;">
+                                <canvas id="canvas" width="752" height="567" style="border-radius: 5px;">Your browser doesn't support HTML5 canvas, please upgrade to play!</canvas>
+                                <div id="director"> 
+        	                        <div class="startScreen"> 
+        	                            <h1><span style="font-family: 'Bangers', arial,sans-serif; font-size:120px;">BreakIt</span></h1> 
+        	                        </div>
+                                     <div> 
+        	                            <h1><img id="btnPlay" style="display:none" src="assets/images/play-icon.png" title="Play Now" onclick="play()"/></h1> 
+        	                        </div>
+                                 </div> 
+                                 <div id="levels-container" class="container-ui" style="display:none;">
+                                    <table border=0 cellpadding=0 cellspacing=0  style="height:100%; width:100%;">
+                                        <tr>
+                                            <td style="height:100%;">
+                                                <div id="levels" style="margin:100px;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div style="padding:0px 0px 10px 10px;">
+                                                   <!-- <button class="btn small primary"><< Back</button>-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                 </div>
+
+                                 <div class="container-ui" id="unpause" style="display:none; filter: alpha(opacity=25); opacity: 0.25; text-align: center;">
+                                    <div style="top:25%; position:relative;"> 
+        	                            <h1><img src="assets/images/play-icon.png" title="Play Now" onclick="BREAKOUT.pauseToggle()"/></h1> 
+        	                        </div>
+                                 </div>
+
+
+                             </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <img id="iconPause" src="assets/images/pause.png" style="display:none;" title="Pause Game!"/>
+        <img id="iconRefresh" src="assets/images/refresh-icon.png" style="display:none;" />
+        <img id="iconList" src="assets/images/list-icon.png" style="display:none;" />
+        
+         <!-- <script type="text/javascript" src="modernizr.custom.20516.js"></script>-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="soundmanagerv297a-20110801/script/soundmanager2-jsmin.js"></script>
+  
+        <script type="text/javascript" src="js/AssetManager.js"></script>
+        <script type="text/javascript" src="js/Entities.js"></script>
+        <script type="text/javascript" src="js/Emitter.js"></script>
+        <script type="text/javascript" src="js/GameStates.js"></script>
+        <script type="text/javascript" src="js/Breakout.js"></script>
+        <script type="text/javascript" src="js/Levels.js"></script>
+        <script type="text/javascript" src="js/Main.js"></script>
+    
+        <!--<script type="text/javascript" src="build/compiled.js"></script>-->
+    </body>
+</html>

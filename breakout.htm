@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Enable IE9 Standards mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+        <link href='http://fonts.googleapis.com/css?family=Bangers&v1' rel='stylesheet' type='text/css'/>
+        <link href='assets/base.css' rel='stylesheet' type='text/css'/>
+    </head>
+    <body style="margin:0;padding:0;">
+        <div style="display: block;">
+            <div style="position:relative; top:20px;">
+                <table border="0" style=" margin: auto;">
+                    <tr>
+                        <td>
+                            <div id="scoreboard-container">
+                                <span>Score:</span><span id="scoreboard">0</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="height:100%;">
+                             <div style="position: relative; border:4px solid #0B3657; width:752px; height:567px; border-radius: 15px; background-color:black;">
+                                <canvas id="canvas" width="752" height="567" style="border-radius: 5px;">Your browser doesn't support HTML5 canvas, please upgrade to play!</canvas>
+                                <div id="director"> 
+        	                        <div class="startScreen"> 
+        	                            <h1><span style="font-family: 'Bangers', arial,sans-serif; font-size:120px;">Breakout</span></h1> 
+        	                        </div>
+                                     <div> 
+        	                            <h1><img id="btnPlay" style="display:none" src="assets/images/play-icon.png" title="Play Now" onclick="play()"/></h1> 
+        	                        </div>
+                                 </div> 
+                             </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- <script type="text/javascript" src="modernizr.custom.20516.js"></script>-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="soundmanagerv297a-20110801/script/soundmanager2-jsmin.js"></script>
+        <script type="text/javascript" src="build/compiled.js"></script>
+    </body>
+</html>
